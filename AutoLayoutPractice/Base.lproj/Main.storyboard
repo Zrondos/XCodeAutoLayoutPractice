@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayoutPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="W1R-o8-9Pw">
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000045" height="736"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kuz-1f-GS2">
+                                <rect key="frame" x="0.0" y="515.33333333333337" width="414" height="220.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="City by the Sea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW7-sV-WGZ">
+                                        <rect key="frame" x="10" y="0.0" width="384" height="28"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" text="This is Suh D00d Island How beautiful" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9E5-VS-ZU0">
+                                        <rect key="frame" x="15" y="36" width="384" height="78"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sW7-sV-WGZ" secondAttribute="trailing" constant="20" id="AG1-6Z-lEW"/>
+                                    <constraint firstItem="9E5-VS-ZU0" firstAttribute="top" secondItem="sW7-sV-WGZ" secondAttribute="bottom" id="BmG-PL-3e5"/>
+                                    <constraint firstItem="9E5-VS-ZU0" firstAttribute="leading" secondItem="Kuz-1f-GS2" secondAttribute="leading" constant="20" id="GmH-s6-pbP"/>
+                                    <constraint firstItem="sW7-sV-WGZ" firstAttribute="top" secondItem="Kuz-1f-GS2" secondAttribute="top" id="HYn-8r-oKd"/>
+                                    <constraint firstAttribute="trailing" secondItem="9E5-VS-ZU0" secondAttribute="trailing" constant="100" id="VLG-lx-CkR"/>
+                                    <constraint firstItem="sW7-sV-WGZ" firstAttribute="leading" secondItem="Kuz-1f-GS2" secondAttribute="leading" constant="10" id="dg4-4Y-5Mi"/>
+                                    <constraint firstAttribute="bottom" secondItem="9E5-VS-ZU0" secondAttribute="bottom" constant="106.7" id="tXQ-iA-pQA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Kuz-1f-GS2" secondAttribute="bottom" id="9cr-k4-4bE"/>
+                            <constraint firstItem="Kuz-1f-GS2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="9jC-FY-EWB"/>
+                            <constraint firstAttribute="trailing" secondItem="Kuz-1f-GS2" secondAttribute="trailing" id="HUK-p8-Vjc"/>
+                            <constraint firstAttribute="trailing" secondItem="W1R-o8-9Pw" secondAttribute="trailing" id="QdI-t2-JQ1"/>
+                            <constraint firstItem="W1R-o8-9Pw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="R3h-4l-2Mp"/>
+                            <constraint firstItem="Kuz-1f-GS2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c1A-Us-Z98"/>
+                            <constraint firstItem="W1R-o8-9Pw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o5h-QY-h0b"/>
+                            <constraint firstAttribute="bottom" secondItem="W1R-o8-9Pw" secondAttribute="bottom" id="yvY-pD-XiX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.23913043478262"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="landscape" width="2005" height="1085"/>
+    </resources>
 </document>
